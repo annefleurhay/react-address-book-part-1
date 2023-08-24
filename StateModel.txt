@@ -1,0 +1,32 @@
+Menu {
+Array with objects and a form to be filled out
+    Contact list: [{}],
+    Add new contact list: {}
+}
+
+Contacts {
+Array with objects in it
+
+    ListOfContacts: [{}]
+
+
+}
+
+Contact {
+Object with four properties
+
+    FirstName: '',
+    LastName: '',
+    Street: '',
+    City: ''
+}
+
+AddContact {
+    Form that you can submit
+    
+    Firstname: '',
+    LastName: '',
+    Street: '',
+    City: ''
+
+}
