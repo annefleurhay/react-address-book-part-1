@@ -1,32 +1,54 @@
 Menu {
-Array with objects and a form to be filled out
-    Contact list: [{}],
-    Add new contact list: {}
+    Nothing
+}
+
+App {
+    
+    - contact ( uses state) [{}]
+    - an array with nested objects inside
+    - holds new array called addContact with old contact list and added contact 
+        ...contact + setcontact (this contains:
+        id:,
+        name:,
+        address {
+            city,
+            street
+        }) 
+}
+
+ContactList {
+
+    - holds the contact array and shows this
+    - inital contact (uses state)
+    - new contact list (uses contact state + copy of this state with new contact in it) [{}]
 }
 
 Contacts {
-Array with objects in it
 
-    ListOfContacts: [{}]
+    - shows one contact from the ContactList
+    - contact ( uses state) [{}] and then showing one contact
+    initial contact (uses state) called user 
+        user.name
+        user.address.city
+        user.address.street
+}
 
+Form {
+
+    - holds the contact state and also a newContact array with nested objects inside 
+        called newContact {
+            id:
+
+            address {
+                city,
+                street
+            }
+        }
+    - contact (uses state) [{}]
 
 }
 
-Contact {
-Object with four properties
 
-    FirstName: '',
-    LastName: '',
-    Street: '',
-    City: ''
-}
 
-AddContact {
-    Form that you can submit
-    
-    Firstname: '',
-    LastName: '',
-    Street: '',
-    City: ''
 
-}
+
